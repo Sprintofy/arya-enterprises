@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Arya Enterprises - Your trusted partner for Solar PV Systems, Inverters, UPS Systems, and Batteries. 10+ years of excellence in power solutions.">
+    <meta name="keywords" content="About Arya Enterprises, Solar Company, Power Solutions Provider, Renewable Energy Company">
+    <meta name="author" content="Arya Enterprises">
+    
+    <title>About Us | Arya Enterprises - Solar & Power Solutions</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#332cad',
+                            dark: '#1b2779',
+                            light: '#4a42c7'
+                        },
+                        secondary: {
+                            DEFAULT: '#8adb4e',
+                            dark: '#6bc235',
+                            light: '#a5e872'
+                        },
+                        accent: {
+                            DEFAULT: '#58a6cc',
+                            dark: '#4089ad',
+                            light: '#7bbfdf'
+                        },
+                        solar: {
+                            yellow: '#fbbf24',
+                            orange: '#f59e0b'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-poppins bg-white text-gray-800 overflow-x-hidden">
+    
+    <!-- ========== PRELOADER ========== -->
+    <div id="preloader" class="fixed inset-0 z-[9999] bg-white flex items-center justify-center transition-opacity duration-500">
+        <div class="text-center">
+            <div class="relative w-20 h-20 mx-auto mb-4">
+                <div class="absolute inset-0 border-4 border-secondary/30 rounded-full"></div>
+                <div class="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                <i class="fa-solid fa-sun text-solar-yellow text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse"></i>
+            </div>
+            <p class="text-primary font-semibold">Loading...</p>
+        </div>
+    </div>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="relative w-12 h-12 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
+                        <i class="fa-solid fa-solar-panel text-white text-xl"></i>
+                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-solar-yellow rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Arya</span>
+                        <span class="text-xs font-medium text-accent -mt-1">Enterprises</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-primary hover:bg-primary/5 transition-all duration-300 relative group">
+                        Home
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="nav-link active px-4 py-2 rounded-lg text-primary font-medium hover:bg-primary/5 transition-all duration-300 relative group">
+                        About Us
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
+                    </a>
+                    <a href="services.html" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-primary hover:bg-primary/5 transition-all duration-300 relative group">
+                        Services
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-primary hover:bg-primary/5 transition-all duration-300 relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
+                    </a>
+                </div>
+
+                <!-- CTA Button & Mobile Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="contact.html" class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2.5 rounded-full font-medium hover:shadow-lg hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fa-solid fa-phone-volume text-sm"></i>
+                        <span>Get Quote</span>
+                    </a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-primary/10 transition-colors duration-300" aria-label="Toggle Menu">
+                        <div class="hamburger-icon w-6 h-5 flex flex-col justify-between">
+                            <span class="w-full h-0.5 bg-primary rounded-full transform transition-all duration-300 origin-left"></span>
+                            <span class="w-full h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+                            <span class="w-full h-0.5 bg-primary rounded-full transform transition-all duration-300 origin-left"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 py-6 space-y-2">
+                <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors duration-300">
+                    <i class="fa-solid fa-home w-5"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-primary/5 text-primary font-medium">
+                    <i class="fa-solid fa-building w-5"></i>
+                    <span>About Us</span>
+                </a>
+                <a href="services.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors duration-300">
+                    <i class="fa-solid fa-cogs w-5"></i>
+                    <span>Services</span>
+                </a>
+                <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors duration-300">
+                    <i class="fa-solid fa-envelope w-5"></i>
+                    <span>Contact</span>
+                </a>
+                <div class="pt-4 border-t border-gray-100">
+                    <a href="contact.html" class="flex items-center justify-center space-x-2 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3 rounded-xl font-medium w-full">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>Get Free Quote</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-primary-dark via-primary to-accent overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');"></div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-2xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-solar-yellow/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center text-white" data-animate="fade-in-up">
+                <!-- Breadcrumb -->
+                <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+                    <ol class="flex items-center space-x-2 text-sm">
+                        <li>
+                            <a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-home"></i>
+                                <span class="ml-1">Home</span>
+                            </a>
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </li>
+                        <li class="text-white font-medium">About Us</li>
+                    </ol>
+                </nav>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                    About <span class="text-secondary">Arya Enterprises</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                    Pioneering sustainable energy solutions since 2014. We're committed to powering a greener future through innovative solar and power technologies.
+                </p>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-16 lg:h-24">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== COMPANY OVERVIEW SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                
+                <!-- Left - Content -->
+                <div class="space-y-6" data-animate="fade-in-left">
+                    <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2">
+                        <i class="fa-solid fa-building text-primary text-sm"></i>
+                        <span class="text-primary font-semibold text-sm">Who We Are</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                        Leading the Way in 
+                        <span class="text-primary">Sustainable Energy</span>
+                    </h2>
+
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Arya Enterprises was founded in 2014 with a vision to make clean, renewable energy accessible to everyone. What started as a small venture has grown into one of the most trusted names in the solar and power solutions industry.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        We specialize in providing comprehensive energy solutions including solar PV systems, inverters, UPS systems, and batteries. Our team of certified professionals ensures that every installation meets the highest standards of quality and efficiency.
+                    </p>
+
+                    <p class="text-gray-600 leading-relaxed">
+                        With over 500+ successful installations and 1000+ satisfied customers, we have established ourselves as a reliable partner for both residential and commercial energy needs. Our commitment to excellence and customer satisfaction has been the cornerstone of our success.
+                    </p>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-6">
+                        <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-primary" data-counter="10">0</div>
+                            <div class="text-sm text-gray-500">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-secondary" data-counter="500">0</div>
+                            <div class="text-sm text-gray-500">Projects Done</div>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-2xl">
+                            <div class="text-2xl sm:text-3xl font-bold text-accent" data-counter="50">0</div>
+                            <div class="text-sm text-gray-500">Team Members</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Images -->
+                <div class="relative" data-animate="fade-in-right">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Arya Enterprises Team Working on Solar Installation" 
+                                 class="w-full h-[400px] lg:h-[500px] object-cover">
+                        </div>
+
+                        <!-- Floating Card 1 -->
+                        <div class="absolute -bottom-6 -left-6 lg:-left-10 bg-white rounded-2xl shadow-xl p-4 sm:p-6 transform hover:scale-105 transition-transform duration-300">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center">
+                                    <i class="fa-solid fa-award text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xl font-bold text-gray-900">Certified</div>
+                                    <div class="text-sm text-gray-500">ISO 9001:2015</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Card 2 -->
+                        <div class="absolute -top-6 -right-6 lg:-right-10 bg-gradient-to-br from-primary to-primary-dark rounded-2xl shadow-xl p-4 text-white transform hover:scale-105 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold">1000+</div>
+                                <div class="text-sm opacity-80">Happy Clients</div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Element -->
+                        <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MISSION & VISION SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-bullseye text-secondary text-sm"></i>
+                    <span class="text-secondary-dark font-semibold text-sm">Our Purpose</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Mission & <span class="text-primary">Vision</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Guided by our core values, we strive to make a positive impact on the environment while delivering exceptional value to our customers.
+                </p>
+            </div>
+
+            <!-- Mission & Vision Cards -->
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Mission Card -->
+                <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 lg:p-10 border border-gray-100 transition-all duration-500 relative overflow-hidden" data-animate="fade-in-left">
+                    <!-- Background Gradient -->
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-1/2 translate-x-1/2"></div>
+
+                    <div class="relative">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-rocket text-white text-3xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            To accelerate the transition to sustainable energy by providing innovative, reliable, and affordable solar and power solutions that empower homes and businesses to reduce their carbon footprint while saving on energy costs.
+                        </p>
+
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-secondary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Deliver quality products at competitive prices</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-secondary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Provide exceptional customer service and support</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-check text-secondary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Promote environmental sustainability</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="group bg-white rounded-3xl shadow-lg hover:shadow-2xl p-8 lg:p-10 border border-gray-100 transition-all duration-500 relative overflow-hidden" data-animate="fade-in-right">
+                    <!-- Background Gradient -->
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-1/2 translate-x-1/2"></div>
+
+                    <div class="relative">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-eye text-white text-3xl"></i>
+                        </div>
+
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
+
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            To become the most trusted and preferred solar energy partner in India, leading the renewable energy revolution and creating a sustainable future for generations to come through cutting-edge technology and unmatched service excellence.
+                        </p>
+
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-star text-primary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Be the #1 solar solutions provider in the region</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-star text-primary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Pioneer innovative energy technologies</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <div class="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-star text-primary text-xs"></i>
+                                </div>
+                                <span class="text-gray-600">Create a carbon-neutral future</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CORE VALUES SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-accent/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-heart text-accent text-sm"></i>
+                    <span class="text-accent-dark font-semibold text-sm">What Drives Us</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Our Core <span class="text-primary">Values</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    These fundamental principles guide everything we do and help us maintain the highest standards of excellence.
+                </p>
+            </div>
+
+            <!-- Values Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Value 1 - Quality -->
+                <div class="group text-center p-8 rounded-3xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 hover:border-primary/20 hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="100">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <i class="fa-solid fa-gem text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quality</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We never compromise on quality. Every product and service meets the highest industry standards.
+                    </p>
+                </div>
+
+                <!-- Value 2 - Integrity -->
+                <div class="group text-center p-8 rounded-3xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 hover:border-secondary/20 hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="200">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Integrity</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Honesty and transparency are at the heart of all our business relationships.
+                    </p>
+                </div>
+
+                <!-- Value 3 - Innovation -->
+                <div class="group text-center p-8 rounded-3xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 hover:border-accent/20 hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="300">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <i class="fa-solid fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Innovation</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        We continuously explore new technologies to deliver cutting-edge solutions.
+                    </p>
+                </div>
+
+                <!-- Value 4 - Customer Focus -->
+                <div class="group text-center p-8 rounded-3xl bg-gradient-to-b from-gray-50 to-white border border-gray-100 hover:border-solar-yellow/20 hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="400">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-solar-yellow to-solar-orange rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <i class="fa-solid fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Customer Focus</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Our customers' success is our success. We go above and beyond to exceed expectations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY TRUST US SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-gradient-to-br from-primary-dark via-primary to-accent relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-handshake text-solar-yellow text-sm"></i>
+                    <span class="text-white font-semibold text-sm">Experience & Trust</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Why Customers <span class="text-secondary">Trust Us</span>
+                </h2>
+                <p class="text-lg text-gray-200">
+                    With over a decade of experience, we've built a reputation for reliability, quality, and exceptional service.
+                </p>
+            </div>
+
+            <!-- Trust Points Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Trust Point 1 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="100">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-certificate text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certified Experts</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our team consists of certified professionals with extensive training in solar technology and power systems installation.
+                    </p>
+                </div>
+
+                <!-- Trust Point 2 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="200">
+                    <div class="w-16 h-16 bg-solar-yellow/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield-check text-solar-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">25 Year Warranty</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We stand behind our products with industry-leading warranties, giving you peace of mind for decades to come.
+                    </p>
+                </div>
+
+                <!-- Trust Point 3 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="300">
+                    <div class="w-16 h-16 bg-accent-light/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-headset text-accent-light text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our dedicated support team is available around the clock to assist you with any queries or technical issues.
+                    </p>
+                </div>
+
+                <!-- Trust Point 4 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="400">
+                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-coins text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Best Price Guarantee</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        We offer competitive pricing without compromising on quality. Get the best value for your investment.
+                    </p>
+                </div>
+
+                <!-- Trust Point 5 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="500">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-truck-fast text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quick Installation</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Our efficient team ensures fast and hassle-free installation, minimizing disruption to your daily routine.
+                    </p>
+                </div>
+
+                <!-- Trust Point 6 -->
+                <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-white hover:bg-white/15 transition-all duration-300" data-animate="fade-in-up" data-delay="600">
+                    <div class="w-16 h-16 bg-solar-yellow/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-leaf text-solar-yellow text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Eco-Friendly</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Join us in our mission to reduce carbon emissions and create a sustainable future for our planet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TIMELINE SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-clock-rotate-left text-primary text-sm"></i>
+                    <span class="text-primary font-semibold text-sm">Our Journey</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    A Decade of <span class="text-primary">Excellence</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    From humble beginnings to industry leadership, here's how we've grown over the years.
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-secondary to-accent rounded-full -translate-x-1/2"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12 lg:space-y-0">
+                    
+                    <!-- Timeline Item 1 - 2014 -->
+                    <div class="relative lg:flex lg:items-center" data-animate="fade-in-up">
+                        <div class="lg:w-1/2 lg:pr-12 lg:text-right">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 lg:ml-auto lg:mr-0 max-w-md border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <span class="inline-block px-3 py-1 bg-primary/10 text-primary font-bold rounded-full text-sm mb-3">2014</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Company Founded</h3>
+                                <p class="text-gray-600">Arya Enterprises was established with a vision to bring sustainable energy solutions to the masses. Started with a small team of 5 passionate individuals.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-primary rounded-full items-center justify-center shadow-lg z-10">
+                            <i class="fa-solid fa-flag text-white"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12"></div>
+                    </div>
+
+                    <!-- Timeline Item 2 - 2016 -->
+                    <div class="relative lg:flex lg:items-center" data-animate="fade-in-up">
+                        <div class="lg:w-1/2 lg:pr-12"></div>
+                        <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-secondary rounded-full items-center justify-center shadow-lg z-10">
+                            <i class="fa-solid fa-award text-white"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 max-w-md border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <span class="inline-block px-3 py-1 bg-secondary/10 text-secondary-dark font-bold rounded-full text-sm mb-3">2016</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">First 100 Installations</h3>
+                                <p class="text-gray-600">Achieved our first major milestone of 100 successful solar installations. Expanded our product range to include inverters and UPS systems.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 - 2018 -->
+                    <div class="relative lg:flex lg:items-center" data-animate="fade-in-up">
+                        <div class="lg:w-1/2 lg:pr-12 lg:text-right">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 lg:ml-auto lg:mr-0 max-w-md border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <span class="inline-block px-3 py-1 bg-accent/10 text-accent-dark font-bold rounded-full text-sm mb-3">2018</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">ISO Certification</h3>
+                                <p class="text-gray-600">Received ISO 9001:2015 certification for our commitment to quality management systems. Team grew to 25 members.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-accent rounded-full items-center justify-center shadow-lg z-10">
+                            <i class="fa-solid fa-certificate text-white"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12"></div>
+                    </div>
+
+                    <!-- Timeline Item 4 - 2020 -->
+                    <div class="relative lg:flex lg:items-center" data-animate="fade-in-up">
+                        <div class="lg:w-1/2 lg:pr-12"></div>
+                        <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-solar-yellow rounded-full items-center justify-center shadow-lg z-10">
+                            <i class="fa-solid fa-building text-white"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12">
+                            <div class="bg-white rounded-2xl shadow-lg p-6 max-w-md border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                                <span class="inline-block px-3 py-1 bg-solar-yellow/10 text-solar-orange font-bold rounded-full text-sm mb-3">2020</span>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Commercial Expansion</h3>
+                                <p class="text-gray-600">Expanded into commercial and industrial solar solutions. Completed our first 1MW solar plant project.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 5 - 2024 -->
+                    <div class="relative lg:flex lg:items-center" data-animate="fade-in-up">
+                        <div class="lg:w-1/2 lg:pr-12 lg:text-right">
+                            <div class="bg-gradient-to-br from-primary to-primary-dark rounded-2xl shadow-xl p-6 lg:ml-auto lg:mr-0 max-w-md text-white">
+                                <span class="inline-block px-3 py-1 bg-white/20 font-bold rounded-full text-sm mb-3">2024</span>
+                                <h3 class="text-xl font-bold mb-2">500+ Projects & Growing</h3>
+                                <p class="text-gray-200">Today, with 500+ successful installations, 50+ team members, and presence across multiple states, we continue to lead the solar revolution.</p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-full items-center justify-center shadow-lg z-10 ring-4 ring-white">
+                            <i class="fa-solid fa-sun text-white text-xl animate-spin-slow"></i>
+                        </div>
+                        <div class="lg:w-1/2 lg:pl-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TEAM SECTION (Optional) ========== -->
+    <section class="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-users text-primary text-sm"></i>
+                    <span class="text-primary font-semibold text-sm">Our Team</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Meet Our <span class="text-primary">Leadership</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    The driving force behind our success - experienced professionals dedicated to your energy needs.
+                </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Team Member 1 -->
+                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="100">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Rajesh Arya - Founder & CEO" 
+                             class="w-full h-72 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        
+                        <!-- Social Links -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Rajesh Arya</h3>
+                        <p class="text-primary font-medium mb-3">Founder & CEO</p>
+                        <p class="text-gray-600 text-sm">20+ years of experience in the energy sector. Visionary leader committed to sustainable solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="200">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Priya Sharma - Technical Director" 
+                             class="w-full h-72 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        
+                        <!-- Social Links -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Priya Sharma</h3>
+                        <p class="text-primary font-medium mb-3">Technical Director</p>
+                        <p class="text-gray-600 text-sm">Expert in solar technology with 15+ years of experience. Leads our technical innovations.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-500" data-animate="fade-in-up" data-delay="300">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Amit Kumar - Operations Head" 
+                             class="w-full h-72 object-cover object-top group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        
+                        <!-- Social Links -->
+                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all duration-300">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Amit Kumar</h3>
+                        <p class="text-primary font-medium mb-3">Operations Head</p>
+                        <p class="text-gray-600 text-sm">Ensures smooth operations and timely project delivery. Expert in logistics and team management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative bg-gradient-to-br from-primary via-primary-dark to-accent rounded-[3rem] overflow-hidden" data-animate="fade-in-up">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg class="absolute top-0 right-0 w-1/2 h-full" viewBox="0 0 400 400" fill="none">
+                        <circle cx="300" cy="100" r="150" stroke="white" stroke-width="0.5"/>
+                        <circle cx="350" cy="200" r="200" stroke="white" stroke-width="0.5"/>
+                        <circle cx="250" cy="300" r="100" stroke="white" stroke-width="0.5"/>
+                    </svg>
+                </div>
+
+                <!-- Sun Animation -->
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-solar-yellow/20 rounded-full blur-3xl animate-pulse"></div>
+
+                <div class="relative px-8 py-16 lg:px-16 lg:py-20 text-center">
+                    <div class="max-w-3xl mx-auto">
+                        <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                            <i class="fa-solid fa-handshake text-solar-yellow"></i>
+                            <span class="text-white font-medium text-sm">Partner With Us</span>
+                        </div>
+
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                            Ready to Start Your 
+                            <span class="text-secondary">Solar Journey?</span>
+                        </h2>
+
+                        <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+                            Join thousands of satisfied customers who have made the switch to clean energy. Contact us today for a free consultation and customized quote.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <a href="contact.html" class="inline-flex items-center space-x-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary hover:text-white hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>Get Free Consultation</span>
+                            </a>
+                            <a href="services.html" class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+                                <i class="fa-solid fa-solar-panel"></i>
+                                <span>Explore Services</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-900 text-white pt-20 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Footer Top -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-gray-800">
+                
+                <!-- Company Info -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="flex items-center space-x-3 mb-6">
+                        <div class="relative w-12 h-12 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-solar-panel text-white text-xl"></i>
+                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-solar-yellow rounded-full animate-pulse"></div>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-bold text-white">Arya</span>
+                            <span class="text-xs font-medium text-accent -mt-1">Enterprises</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Leading provider of solar and power solutions. We're committed to delivering clean, sustainable energy for a brighter future.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 relative">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="index.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 relative">
+                        Our Services
+                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Solar PV Systems</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Inverters</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>UPS Systems</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                                <span>Batteries</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6 relative">
+                        Contact Us
+                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-location-dot text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-400">123 Solar Street, Green City,<br>New Delhi - 110001, India</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-phone text-secondary"></i>
+                            </div>
+                            <div>
+                                <a href="tel:+919876543210" class="text-gray-400 hover:text-secondary transition-colors duration-300">+91 98765 43210</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-envelope text-accent"></i>
+                            </div>
+                            <div>
+                                <a href="mailto:info@aryaenterprises.com" class="text-gray-400 hover:text-secondary transition-colors duration-300">info@aryaenterprises.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <p class="text-gray-500 text-sm text-center sm:text-left">
+                    &copy; <span id="current-year">2024</span> Arya Enterprises. All Rights Reserved.
+                </p>
+                <div class="flex items-center space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-secondary transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-secondary transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BACK TO TOP BUTTON ========== -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:shadow-xl hover:scale-110 z-50" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== WHATSAPP BUTTON ========== -->
+    <a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 hover:shadow-xl hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
