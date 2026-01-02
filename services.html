@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Arya Enterprises Services - Solar PV Systems, Inverters, UPS Systems, and Batteries. Complete energy solutions for residential, commercial, and industrial needs.">
-    <meta name="keywords" content="Solar PV Systems, Solar Inverters, UPS Systems, Solar Batteries, Energy Storage, Power Solutions">
+    <meta name="keywords" content="Solar PV Systems, Solar Inverters, UPS Systems, Solar Batteries, Energy Storage, Power Solutions, Monocrystalline, Polycrystalline, Lithium Battery">
     <meta name="author" content="Arya Enterprises">
     
     <title>Services | Arya Enterprises - Solar & Power Solutions</title>
@@ -58,7 +58,102 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* Preloader */
+        .preloader-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        /* Hamburger Animation */
+        .hamburger-active span:nth-child(1) {
+            transform: rotate(45deg) translateY(8px);
+        }
+        .hamburger-active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-8px);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top-visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+        
+        /* Scroll Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in-up.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in-left.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in-right.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        /* Card Hover Effects */
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #332cad, #58a6cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
 <body class="font-poppins bg-white text-gray-800 overflow-x-hidden">
     
@@ -81,14 +176,9 @@
                 
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-3 group">
-                    <div class="relative w-12 h-12 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300 shadow-lg">
-                        <i class="fa-solid fa-solar-panel text-white text-xl"></i>
-                        <div class="absolute -top-1 -right-1 w-4 h-4 bg-solar-yellow rounded-full animate-pulse"></div>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-xl font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">Arya</span>
-                        <span class="text-xs font-medium text-accent -mt-1">Enterprises</span>
-                    </div>
+                      <img src ="assets/images/logo.png " width="80px" height="80px"
+                         alt="Arya Enterprises Logo" 
+                         class=" object-contain transform group-hover:rotate-12 transition-transform duration-300">
                 </a>
 
                 <!-- Desktop Menu -->
@@ -98,12 +188,12 @@
                         <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
                     </a>
                     <a href="about.html" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-primary hover:bg-primary/5 transition-all duration-300 relative group">
-                        About Us
+                        About 
                         <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
                     </a>
-                    <a href="services.html" class="nav-link active px-4 py-2 rounded-lg text-primary font-medium hover:bg-primary/5 transition-all duration-300 relative group">
+                    <a href="services.html" class="nav-link active px-4 py-2 rounded-lg text-primary font-medium bg-primary/5 transition-all duration-300 relative group">
                         Services
-                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-secondary rounded-full group-hover:w-8 transition-all duration-300"></span>
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-1 bg-secondary rounded-full transition-all duration-300"></span>
                     </a>
                     <a href="contact.html" class="nav-link px-4 py-2 rounded-lg text-gray-600 font-medium hover:text-primary hover:bg-primary/5 transition-all duration-300 relative group">
                         Contact
@@ -139,7 +229,7 @@
                 </a>
                 <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-600 hover:bg-primary/5 hover:text-primary transition-colors duration-300">
                     <i class="fa-solid fa-building w-5"></i>
-                    <span>About Us</span>
+                    <span>About</span>
                 </a>
                 <a href="services.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-primary/5 text-primary font-medium">
                     <i class="fa-solid fa-cogs w-5"></i>
@@ -169,9 +259,10 @@
         <!-- Floating Elements -->
         <div class="absolute top-20 left-10 w-20 h-20 bg-secondary/20 rounded-full blur-2xl animate-pulse"></div>
         <div class="absolute bottom-20 right-10 w-32 h-32 bg-solar-yellow/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-accent/30 rounded-full blur-xl animate-float"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center text-white" data-animate="fade-in-up">
+            <div class="text-center text-white fade-in-up">
                 <!-- Breadcrumb -->
                 <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
                     <ol class="flex items-center space-x-2 text-sm">
@@ -192,8 +283,24 @@
                     Our <span class="text-secondary">Services</span>
                 </h1>
                 <p class="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                    Comprehensive solar and power solutions tailored to meet your specific energy requirements. From consultation to installation and maintenance, we've got you covered.
+                    Complete solar and power solutions including Solar PV Systems, High-Efficiency Inverters, UPS Systems, and Premium Batteries for residential, commercial, and industrial applications.
                 </p>
+
+                <!-- Quick Stats -->
+                <div class="flex flex-wrap justify-center gap-8 mt-10">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary">500+</div>
+                        <div class="text-sm text-gray-300">Projects Completed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-solar-yellow">50MW+</div>
+                        <div class="text-sm text-gray-300">Capacity Installed</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent-light">25 Years</div>
+                        <div class="text-sm text-gray-300">Panel Warranty</div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -209,58 +316,75 @@
     <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
         <!-- Background Decoration -->
         <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                 <div class="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2 mb-6">
                     <i class="fa-solid fa-solar-panel text-secondary text-sm"></i>
                     <span class="text-secondary-dark font-semibold text-sm">Complete Energy Solutions</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    Powering Your World with <span class="text-primary">Excellence</span>
+                    Powering Your World with <span class="text-primary">Clean Energy</span>
                 </h2>
                 <p class="text-lg text-gray-600">
-                    We offer a comprehensive range of solar and power solutions designed to meet diverse energy needs across residential, commercial, and industrial sectors.
+                    We offer end-to-end solar and power solutions including high-efficiency solar panels, advanced inverters, reliable UPS systems, and long-lasting batteries for all your energy needs.
                 </p>
             </div>
 
             <!-- Services Grid - Quick Overview -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                <!-- Service 1 -->
-                <a href="#solar-pv" class="group bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-solar-yellow/30 hover:shadow-xl transition-all duration-300">
-                    <div class="w-14 h-14 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <!-- Service 1 - Solar PV -->
+                <a href="#solar-pv" class="group service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-solar-yellow/30 hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 animate-pulse-glow">
                         <i class="fa-solid fa-sun text-white text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Solar PV Systems</h3>
-                    <p class="text-gray-600 text-sm">Complete solar solutions for all scales</p>
+                    <p class="text-gray-600 text-sm mb-3">Mono, Poly, Bifacial & Thin-Film panels</p>
+                    <div class="flex items-center text-solar-orange text-sm font-medium">
+                        <span>Explore</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
                 </a>
 
-                <!-- Service 2 -->
-                <a href="#inverters" class="group bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
+                <!-- Service 2 - Inverters -->
+                <a href="#inverters" class="group service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                         <i class="fa-solid fa-bolt text-white text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Inverters</h3>
-                    <p class="text-gray-600 text-sm">High-efficiency power conversion</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Solar Inverters</h3>
+                    <p class="text-gray-600 text-sm mb-3">On-Grid, Off-Grid & Hybrid inverters</p>
+                    <div class="flex items-center text-primary text-sm font-medium">
+                        <span>Explore</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
                 </a>
 
-                <!-- Service 3 -->
-                <a href="#ups" class="group bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-secondary/30 hover:shadow-xl transition-all duration-300">
+                <!-- Service 3 - UPS -->
+                <a href="#ups" class="group service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-secondary/30 hover:shadow-xl transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-br from-secondary to-secondary-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                         <i class="fa-solid fa-plug-circle-bolt text-white text-xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">UPS Systems</h3>
-                    <p class="text-gray-600 text-sm">Uninterrupted power supply solutions</p>
+                    <p class="text-gray-600 text-sm mb-3">Online, Offline & Line Interactive UPS</p>
+                    <div class="flex items-center text-secondary-dark text-sm font-medium">
+                        <span>Explore</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
                 </a>
 
-                <!-- Service 4 -->
-                <a href="#batteries" class="group bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all duration-300">
+                <!-- Service 4 - Batteries -->
+                <a href="#batteries" class="group service-card bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all duration-300">
                     <div class="w-14 h-14 bg-gradient-to-br from-accent to-accent-dark rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                         <i class="fa-solid fa-battery-full text-white text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Batteries</h3>
-                    <p class="text-gray-600 text-sm">Premium energy storage systems</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Solar Batteries</h3>
+                    <p class="text-gray-600 text-sm mb-3">Lithium-Ion, Lead Acid & Tubular</p>
+                    <div class="flex items-center text-accent-dark text-sm font-medium">
+                        <span>Explore</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
                 </a>
             </div>
         </div>
@@ -269,105 +393,301 @@
     <!-- ========== SOLAR PV SYSTEMS SECTION ========== -->
     <section id="solar-pv" class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-solar-yellow/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-sun text-solar-orange text-sm"></i>
+                    <span class="text-solar-orange font-semibold text-sm">Service #1</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Solar PV <span class="text-solar-orange">Systems</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Harness the unlimited power of the sun with our premium quality solar photovoltaic systems. We offer complete solutions from design to installation for all applications.
+                </p>
+            </div>
+
+            <!-- Solar Panel Types Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 
-                <!-- Left - Content -->
-                <div class="order-2 lg:order-1" data-animate="fade-in-left">
-                    <div class="inline-flex items-center space-x-2 bg-solar-yellow/10 rounded-full px-4 py-2 mb-6">
-                        <i class="fa-solid fa-sun text-solar-orange text-sm"></i>
-                        <span class="text-solar-orange font-semibold text-sm">Service #1</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        Solar PV <span class="text-solar-orange">Systems</span>
-                    </h2>
-
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Harness the power of the sun with our state-of-the-art solar photovoltaic systems. We provide complete solar solutions from design to installation for residential, commercial, and industrial applications.
-                    </p>
-
-                    <!-- Features -->
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-check text-secondary text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Grid-Tied Systems</h4>
-                                <p class="text-gray-600 text-sm">Connect to the grid for net metering benefits and reduce electricity bills</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-check text-secondary text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Off-Grid Systems</h4>
-                                <p class="text-gray-600 text-sm">Complete energy independence with battery storage solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-check text-secondary text-sm"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900 mb-1">Hybrid Systems</h4>
-                                <p class="text-gray-600 text-sm">Best of both worlds - grid connectivity with battery backup</p>
-                            </div>
+                <!-- Monocrystalline -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 service-card fade-in-up">
+                    <div class="h-48 bg-gradient-to-br from-gray-900 to-gray-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Monocrystalline Solar Panel" 
+                             class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-solar-yellow text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                            Most Efficient
                         </div>
                     </div>
-
-                    <!-- Types -->
-                    <div class="grid grid-cols-3 gap-4 mb-8">
-                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
-                            <i class="fa-solid fa-house text-solar-yellow text-2xl mb-2"></i>
-                            <h5 class="font-semibold text-gray-900 text-sm">Residential</h5>
-                            <p class="text-xs text-gray-500 mt-1">1kW - 10kW</p>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
-                            <i class="fa-solid fa-building text-solar-orange text-2xl mb-2"></i>
-                            <h5 class="font-semibold text-gray-900 text-sm">Commercial</h5>
-                            <p class="text-xs text-gray-500 mt-1">10kW - 100kW</p>
-                        </div>
-                        <div class="text-center p-4 bg-white rounded-xl shadow-md">
-                            <i class="fa-solid fa-industry text-primary text-2xl mb-2"></i>
-                            <h5 class="font-semibold text-gray-900 text-sm">Industrial</h5>
-                            <p class="text-xs text-gray-500 mt-1">100kW+</p>
-                        </div>
-                    </div>
-
-                    <a href="contact.html" class="inline-flex items-center space-x-2 bg-gradient-to-r from-solar-yellow to-solar-orange text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-solar-orange/30 transform hover:-translate-y-0.5 transition-all duration-300">
-                        <i class="fa-solid fa-solar-panel"></i>
-                        <span>Get Solar Quote</span>
-                    </a>
-                </div>
-
-                <!-- Right - Image & Stats -->
-                <div class="order-1 lg:order-2 relative" data-animate="fade-in-right">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar Panel Installation" 
-                             class="w-full h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl">
-                        
-                        <!-- Floating Stats Card -->
-                        <div class="absolute -bottom-6 -left-6 lg:-left-10 bg-white rounded-2xl shadow-xl p-6">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-16 h-16 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-xl flex items-center justify-center">
-                                    <i class="fa-solid fa-chart-line text-white text-2xl"></i>
-                                </div>
-                                <div>
-                                    <div class="text-2xl font-bold text-gray-900">50MW+</div>
-                                    <div class="text-sm text-gray-500">Total Capacity Installed</div>
-                                </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Monocrystalline Panels</h3>
+                        <p class="text-gray-600 text-sm mb-4">Highest efficiency panels made from single-crystal silicon. Ideal for limited roof space.</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Efficiency</span>
+                                <span class="font-semibold text-secondary">20-23%</span>
                             </div>
-                        </div>
-
-                        <!-- Badge -->
-                        <div class="absolute -top-4 -right-4 bg-secondary text-white px-4 py-2 rounded-full shadow-lg">
-                            <span class="font-semibold">25 Year Warranty</span>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Lifespan</span>
+                                <span class="font-semibold text-gray-900">25-30 Years</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Warranty</span>
+                                <span class="font-semibold text-gray-900">25 Years</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Polycrystalline -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-blue-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Polycrystalline Solar Panel" 
+                             class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-accent text-white px-3 py-1 rounded-full text-xs font-bold">
+                            Best Value
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Polycrystalline Panels</h3>
+                        <p class="text-gray-600 text-sm mb-4">Cost-effective option with good performance. Made from multiple silicon crystals.</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Efficiency</span>
+                                <span class="font-semibold text-secondary">15-17%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Lifespan</span>
+                                <span class="font-semibold text-gray-900">20-25 Years</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Warranty</span>
+                                <span class="font-semibold text-gray-900">25 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bifacial -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-purple-900 to-purple-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Bifacial Solar Panel" 
+                             class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold">
+                            Double Sided
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bifacial Panels</h3>
+                        <p class="text-gray-600 text-sm mb-4">Captures sunlight from both sides for up to 30% more energy production.</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Efficiency</span>
+                                <span class="font-semibold text-secondary">22-25%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Extra Gain</span>
+                                <span class="font-semibold text-gray-900">10-30%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Warranty</span>
+                                <span class="font-semibold text-gray-900">30 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thin Film -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 300ms;">
+                    <div class="h-48 bg-gradient-to-br from-teal-900 to-teal-700 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                             alt="Thin Film Solar Panel" 
+                             class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-xs font-bold">
+                            Flexible
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Thin-Film Panels</h3>
+                        <p class="text-gray-600 text-sm mb-4">Lightweight & flexible design. Perfect for curved surfaces and BIPV applications.</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Efficiency</span>
+                                <span class="font-semibold text-secondary">10-13%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Flexibility</span>
+                                <span class="font-semibold text-gray-900">High</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-gray-500">Warranty</span>
+                                <span class="font-semibold text-gray-900">20 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Types -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                
+                <!-- On-Grid System -->
+                <div class="bg-gradient-to-br from-solar-yellow/10 to-solar-orange/10 rounded-3xl p-8 border border-solar-yellow/20 fade-in-up">
+                    <div class="w-16 h-16 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-plug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">On-Grid / Grid-Tied System</h3>
+                    <p class="text-gray-600 mb-6">Connected to the main power grid. Export excess power and earn through net metering. Best for areas with reliable grid supply.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Net metering benefits</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">No battery required</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Lower upfront cost</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Government subsidies available</span>
+                        </li>
+                    </ul>
+                    <div class="bg-white rounded-xl p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Capacity Range</span>
+                            <span class="font-bold text-solar-orange">1kW - 1MW+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Off-Grid System -->
+                <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 border border-primary/20 fade-in-up" style="animation-delay: 100ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-house-signal text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Off-Grid / Standalone System</h3>
+                    <p class="text-gray-600 mb-6">Complete energy independence with battery storage. Perfect for remote locations without grid access.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Complete independence</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">24/7 power availability</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Battery backup included</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Ideal for remote areas</span>
+                        </li>
+                    </ul>
+                    <div class="bg-white rounded-xl p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Capacity Range</span>
+                            <span class="font-bold text-primary">500W - 100kW</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hybrid System -->
+                <div class="bg-gradient-to-br from-secondary/10 to-green-100 rounded-3xl p-8 border border-secondary/20 fade-in-up" style="animation-delay: 200ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-arrows-rotate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Hybrid Solar System</h3>
+                    <p class="text-gray-600 mb-6">Best of both worlds - grid connectivity with battery backup for uninterrupted power supply.</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Grid + Battery backup</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Smart energy management</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Priority load management</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-circle-check text-secondary"></i>
+                            <span class="text-gray-700">Zero power cuts</span>
+                        </li>
+                    </ul>
+                    <div class="bg-white rounded-xl p-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Capacity Range</span>
+                            <span class="font-bold text-secondary-dark">1kW - 500kW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Areas -->
+            <div class="bg-gray-900 rounded-3xl p-8 lg:p-12 fade-in-up">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4">Solar Applications</h3>
+                    <p class="text-gray-400">We provide solar solutions for every need</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-solar-yellow/20 transition-colors duration-300">
+                            <i class="fa-solid fa-house text-solar-yellow text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Residential</span>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors duration-300">
+                            <i class="fa-solid fa-building text-primary-light text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Commercial</span>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-secondary/20 transition-colors duration-300">
+                            <i class="fa-solid fa-industry text-secondary text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Industrial</span>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors duration-300">
+                            <i class="fa-solid fa-wheat-awn text-accent text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Agricultural</span>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yellow-500/20 transition-colors duration-300">
+                            <i class="fa-solid fa-water text-yellow-400 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Solar Pumps</span>
+                    </div>
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-pink-500/20 transition-colors duration-300">
+                            <i class="fa-solid fa-street-view text-pink-400 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300 text-sm">Street Lights</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-in-up">
+                <a href="contact.html" class="inline-flex items-center space-x-3 bg-gradient-to-r from-solar-yellow to-solar-orange text-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-solar-orange/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fa-solid fa-solar-panel"></i>
+                    <span>Get Solar Quote</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -375,112 +695,216 @@
     <!-- ========== INVERTERS SECTION ========== -->
     <section id="inverters" class="py-20 lg:py-32 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-bolt text-primary text-sm"></i>
+                    <span class="text-primary font-semibold text-sm">Service #2</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Solar <span class="text-primary">Inverters</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    High-efficiency inverters that convert DC power from solar panels to AC power. We offer the latest technology inverters from top brands with smart monitoring capabilities.
+                </p>
+            </div>
+
+            <!-- Inverter Types Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
                 
-                <!-- Left - Image & Features -->
-                <div class="relative" data-animate="fade-in-left">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1565619624098-cf4168a7cd9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Solar Inverter Systems" 
-                             class="w-full h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl">
+                <!-- String Inverters -->
+                <div class="bg-gradient-to-br from-white to-primary/5 rounded-3xl shadow-xl overflow-hidden group fade-in-up">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-link text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">String Inverters</h3>
+                        <p class="text-gray-600 mb-6">Most common type for residential and commercial installations. Connects multiple panels in series.</p>
                         
-                        <!-- Features Card -->
-                        <div class="absolute -bottom-6 -right-6 lg:-right-10 bg-white rounded-2xl shadow-xl p-6 max-w-[280px]">
-                            <h4 class="font-bold text-gray-900 mb-3">Key Features</h4>
-                            <ul class="space-y-2">
-                                <li class="flex items-center space-x-2 text-sm">
-                                    <i class="fa-solid fa-bolt text-primary text-xs"></i>
-                                    <span class="text-gray-600">98.5% Efficiency</span>
-                                </li>
-                                <li class="flex items-center space-x-2 text-sm">
-                                    <i class="fa-solid fa-shield text-primary text-xs"></i>
-                                    <span class="text-gray-600">10 Year Warranty</span>
-                                </li>
-                                <li class="flex items-center space-x-2 text-sm">
-                                    <i class="fa-solid fa-mobile text-primary text-xs"></i>
-                                    <span class="text-gray-600">Smart Monitoring</span>
-                                </li>
-                            </ul>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Cost-Effective</span>
+                                    <p class="text-sm text-gray-500">Lower initial investment</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Easy Maintenance</span>
+                                    <p class="text-sm text-gray-500">Simple installation & service</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-secondary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">High Efficiency</span>
+                                    <p class="text-sm text-gray-500">Up to 98.5% conversion</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Efficiency Badge -->
-                        <div class="absolute top-6 left-6 bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-4 shadow-lg">
-                            <div class="text-center">
-                                <div class="text-3xl font-bold">98.5%</div>
-                                <div class="text-xs opacity-90">Max Efficiency</div>
+                        <div class="bg-white rounded-xl p-4 border border-gray-100">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600 text-sm">Capacity Range</span>
+                                <span class="font-bold text-primary">1kW - 100kW</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 text-sm">Warranty</span>
+                                <span class="font-bold text-gray-900">5-10 Years</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right - Content -->
-                <div data-animate="fade-in-right">
-                    <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
-                        <i class="fa-solid fa-bolt text-primary text-sm"></i>
-                        <span class="text-primary font-semibold text-sm">Service #2</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        Solar <span class="text-primary">Inverters</span>
-                    </h2>
-
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        High-performance inverters that efficiently convert DC power from solar panels to AC power for your home or business. Our inverters come with advanced features for optimal energy management.
-                    </p>
-
-                    <!-- Types Grid -->
-                    <div class="grid sm:grid-cols-3 gap-4 mb-8">
-                        <div class="bg-gray-50 rounded-xl p-4 text-center hover:bg-primary/5 transition-colors duration-300">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                <i class="fa-solid fa-link text-primary"></i>
-                            </div>
-                            <h5 class="font-semibold text-gray-900 mb-1">String Inverters</h5>
-                            <p class="text-xs text-gray-600">Cost-effective for standard installations</p>
+                <!-- Micro Inverters -->
+                <div class="bg-gradient-to-br from-white to-secondary/5 rounded-3xl shadow-xl overflow-hidden group fade-in-up" style="animation-delay: 100ms;">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-microchip text-white text-3xl"></i>
                         </div>
-                        <div class="bg-gray-50 rounded-xl p-4 text-center hover:bg-primary/5 transition-colors duration-300">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                <i class="fa-solid fa-microchip text-primary"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Micro Inverters</h3>
+                        <p class="text-gray-600 mb-6">Individual inverters for each panel. Maximum energy harvest with panel-level optimization.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Panel-Level MPPT</span>
+                                    <p class="text-sm text-gray-500">Maximum power from each panel</p>
+                                </div>
                             </div>
-                            <h5 class="font-semibold text-gray-900 mb-1">Micro Inverters</h5>
-                            <p class="text-xs text-gray-600">Panel-level optimization</p>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 text-center hover:bg-primary/5 transition-colors duration-300">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                <i class="fa-solid fa-arrows-rotate text-primary"></i>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Shade Tolerant</span>
+                                    <p class="text-sm text-gray-500">Minimizes shading losses</p>
+                                </div>
                             </div>
-                            <h5 class="font-semibold text-gray-900 mb-1">Hybrid Inverters</h5>
-                            <p class="text-xs text-gray-600">Battery-ready systems</p>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-primary mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Easy Expansion</span>
+                                    <p class="text-sm text-gray-500">Add panels anytime</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Benefits -->
-                    <div class="bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl p-6 mb-8">
-                        <h4 class="font-bold text-gray-900 mb-4">Benefits</h4>
-                        <div class="grid sm:grid-cols-2 gap-3">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-circle-check text-secondary"></i>
-                                <span class="text-gray-700 text-sm">Maximum power point tracking</span>
+                        <div class="bg-white rounded-xl p-4 border border-gray-100">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600 text-sm">Capacity Range</span>
+                                <span class="font-bold text-secondary">200W - 500W/panel</span>
                             </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-circle-check text-secondary"></i>
-                                <span class="text-gray-700 text-sm">Remote monitoring capability</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-circle-check text-secondary"></i>
-                                <span class="text-gray-700 text-sm">Grid synchronization</span>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-circle-check text-secondary"></i>
-                                <span class="text-gray-700 text-sm">Safety protection features</span>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 text-sm">Warranty</span>
+                                <span class="font-bold text-gray-900">25 Years</span>
                             </div>
                         </div>
                     </div>
-
-                    <a href="contact.html" class="inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all duration-300">
-                        <i class="fa-solid fa-bolt"></i>
-                        <span>Explore Inverters</span>
-                    </a>
                 </div>
+
+                <!-- Hybrid Inverters -->
+                <div class="bg-gradient-to-br from-white to-accent/5 rounded-3xl shadow-xl overflow-hidden group fade-in-up" style="animation-delay: 200ms;">
+                    <div class="p-8">
+                        <div class="w-20 h-20 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-arrows-rotate text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Hybrid Inverters</h3>
+                        <p class="text-gray-600 mb-6">All-in-one solution with solar, battery, and grid management. Smart energy optimization.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-solar-orange mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Battery Integration</span>
+                                    <p class="text-sm text-gray-500">Built-in charge controller</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-solar-orange mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">Smart Switching</span>
+                                    <p class="text-sm text-gray-500">Auto grid/solar/battery</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fa-solid fa-check-circle text-solar-orange mt-1"></i>
+                                <div>
+                                    <span class="font-medium text-gray-900">App Monitoring</span>
+                                    <p class="text-sm text-gray-500">WiFi-enabled monitoring</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-4 border border-gray-100">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-600 text-sm">Capacity Range</span>
+                                <span class="font-bold text-accent">1kW - 50kW</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 text-sm">Warranty</span>
+                                <span class="font-bold text-gray-900">5-10 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brands We Offer -->
+            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 fade-in-up">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Trusted Inverter Brands</h3>
+                    <p class="text-gray-600">We partner with leading global manufacturers</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-gray-800">Growatt</span>
+                        </div>
+                        <span class="text-xs text-gray-500">China</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-red-600">Fronius</span>
+                        </div>
+                        <span class="text-xs text-gray-500">Austria</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-blue-600">SMA</span>
+                        </div>
+                        <span class="text-xs text-gray-500">Germany</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-orange-500">Solis</span>
+                        </div>
+                        <span class="text-xs text-gray-500">China</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-blue-800">Huawei</span>
+                        </div>
+                        <span class="text-xs text-gray-500">China</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                        <div class="h-12 flex items-center justify-center mb-2">
+                            <span class="text-2xl font-bold text-green-600">Luminous</span>
+                        </div>
+                        <span class="text-xs text-gray-500">India</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-in-up">
+                <a href="contact.html" class="inline-flex items-center space-x-3 bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Explore Inverters</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -488,118 +912,233 @@
     <!-- ========== UPS SYSTEMS SECTION ========== -->
     <section id="ups" class="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-plug-circle-bolt text-secondary text-sm"></i>
+                    <span class="text-secondary-dark font-semibold text-sm">Service #3</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    UPS <span class="text-secondary">Systems</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Ensure uninterrupted power supply for your critical equipment with our advanced UPS systems. From home computers to data centers, we have solutions for every need.
+                </p>
+            </div>
+
+            <!-- UPS Types -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
                 
-                <!-- Left - Content -->
-                <div class="order-2 lg:order-1" data-animate="fade-in-left">
-                    <div class="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2 mb-6">
-                        <i class="fa-solid fa-plug-circle-bolt text-secondary text-sm"></i>
-                        <span class="text-secondary-dark font-semibold text-sm">Service #3</span>
-                    </div>
-
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        UPS <span class="text-secondary">Systems</span>
-                    </h2>
-
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Ensure uninterrupted power supply for your critical equipment with our advanced UPS systems. Perfect for homes, offices, data centers, and industrial applications requiring continuous power.
-                    </p>
-
-                    <!-- UPS Types -->
-                    <div class="space-y-4 mb-8">
-                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-server text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Online UPS</h4>
-                                    <p class="text-gray-600 text-sm">Double conversion technology for zero transfer time. Ideal for servers and sensitive equipment.</p>
-                                </div>
+                <!-- Offline UPS -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden fade-in-up">
+                    <div class="bg-gradient-to-r from-gray-100 to-gray-200 p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fa-solid fa-power-off text-gray-600 text-2xl"></i>
                             </div>
-                        </div>
-                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-desktop text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Offline UPS</h4>
-                                    <p class="text-gray-600 text-sm">Cost-effective backup power for home computers and basic equipment protection.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow duration-300">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-dark rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-network-wired text-white"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-900 mb-1">Line Interactive UPS</h4>
-                                    <p class="text-gray-600 text-sm">Voltage regulation with battery backup. Perfect for small offices and network equipment.</p>
-                                </div>
-                            </div>
+                            <span class="bg-gray-600 text-white px-4 py-1 rounded-full text-sm font-medium">Basic</span>
                         </div>
                     </div>
-
-                    <!-- Capacity Range -->
-                    <div class="flex items-center space-x-6 mb-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary">600VA</div>
-                            <div class="text-sm text-gray-500">Minimum</div>
-                        </div>
-                        <div class="flex-1 h-2 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"></div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-accent">200kVA</div>
-                            <div class="text-sm text-gray-500">Maximum</div>
-                        </div>
-                    </div>
-
-                    <a href="contact.html" class="inline-flex items-center space-x-2 bg-gradient-to-r from-secondary to-secondary-dark text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-secondary/30 transform hover:-translate-y-0.5 transition-all duration-300">
-                        <i class="fa-solid fa-plug-circle-bolt"></i>
-                        <span>Get UPS Quote</span>
-                    </a>
-                </div>
-
-                <!-- Right - Image & Features -->
-                <div class="order-1 lg:order-2 relative" data-animate="fade-in-right">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="UPS Power Systems" 
-                             class="w-full h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Offline / Standby UPS</h3>
+                        <p class="text-gray-600 mb-6">Basic protection for home computers and simple electronics. Switches to battery when power fails.</p>
                         
-                        <!-- Application Areas -->
-                        <div class="absolute -bottom-6 -left-6 lg:-left-10 bg-white rounded-2xl shadow-xl p-6">
-                            <h4 class="font-bold text-gray-900 mb-3">Applications</h4>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-hospital text-secondary text-sm"></i>
-                                    <span class="text-sm text-gray-600">Hospitals</span>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-clock text-gray-600 text-sm"></i>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-server text-secondary text-sm"></i>
-                                    <span class="text-sm text-gray-600">Data Centers</span>
+                                <span class="text-gray-700">Transfer Time: 5-12ms</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-bolt text-gray-600 text-sm"></i>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-bank text-secondary text-sm"></i>
-                                    <span class="text-sm text-gray-600">Banks</span>
+                                <span class="text-gray-700">Efficiency: 95-98%</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-tag text-gray-600 text-sm"></i>
                                 </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-industry text-secondary text-sm"></i>
-                                    <span class="text-sm text-gray-600">Industries</span>
-                                </div>
+                                <span class="text-gray-700">Most Affordable</span>
                             </div>
                         </div>
 
-                        <!-- Protection Badge -->
-                        <div class="absolute top-6 right-6 bg-white/90 backdrop-blur-sm rounded-xl p-3 shadow-lg">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-shield-check text-secondary text-xl"></i>
-                                <span class="font-semibold text-gray-900">24/7 Protection</span>
+                        <div class="border-t border-gray-100 pt-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Best For:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Home PCs</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Printers</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Routers</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-gray-50 rounded-xl p-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Capacity</span>
+                                <span class="font-bold text-gray-900">600VA - 2kVA</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Line Interactive UPS -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden fade-in-up" style="animation-delay: 100ms;">
+                    <div class="bg-gradient-to-r from-secondary/20 to-green-200 p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fa-solid fa-sliders text-secondary text-2xl"></i>
+                            </div>
+                            <span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-medium">Popular</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Line Interactive UPS</h3>
+                        <p class="text-gray-600 mb-6">Voltage regulation with battery backup. Protects against voltage fluctuations and power outages.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-clock text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Transfer Time: 2-4ms</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-bolt text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Efficiency: 95-98%</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-gauge text-secondary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">AVR Included</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Best For:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-secondary/10 text-secondary-dark px-3 py-1 rounded-full text-sm">Small Offices</span>
+                                <span class="bg-secondary/10 text-secondary-dark px-3 py-1 rounded-full text-sm">NAS</span>
+                                <span class="bg-secondary/10 text-secondary-dark px-3 py-1 rounded-full text-sm">Network</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-secondary/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Capacity</span>
+                                <span class="font-bold text-secondary-dark">1kVA - 10kVA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online UPS -->
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden fade-in-up" style="animation-delay: 200ms;">
+                    <div class="bg-gradient-to-r from-primary/20 to-blue-200 p-6">
+                        <div class="flex items-center justify-between">
+                            <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                                <i class="fa-solid fa-server text-primary text-2xl"></i>
+                            </div>
+                            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">Premium</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Online / Double Conversion UPS</h3>
+                        <p class="text-gray-600 mb-6">Zero transfer time with pure sine wave output. Complete isolation from power disturbances.</p>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-clock text-primary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Transfer Time: 0ms</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-bolt text-primary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Efficiency: 90-96%</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                                    <i class="fa-solid fa-wave-square text-primary text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Pure Sine Wave</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-100 pt-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Best For:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Data Centers</span>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Hospitals</span>
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Industries</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-primary/10 rounded-xl p-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Capacity</span>
+                                <span class="font-bold text-primary">1kVA - 500kVA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications -->
+            <div class="bg-gradient-to-r from-secondary/5 to-green-50 rounded-3xl p-8 lg:p-12 fade-in-up">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">UPS Applications</h3>
+                        <p class="text-gray-600 mb-8">Our UPS systems protect critical equipment across various sectors</p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-hospital text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Hospitals & Clinics</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-server text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Data Centers</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-building-columns text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Banks & ATMs</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-industry text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Manufacturing</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-cart-shopping text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Retail & POS</span>
+                            </div>
+                            <div class="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-md">
+                                <i class="fa-solid fa-wifi text-secondary text-xl"></i>
+                                <span class="font-medium text-gray-900">Telecom</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <img src="assets/images/service/img-1.jpg" 
+                             alt="UPS System Installation" 
+                             class="rounded-3xl shadow-2xl mx-auto">
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-in-up">
+                <a href="contact.html" class="inline-flex items-center space-x-3 bg-gradient-to-r from-secondary to-secondary-dark text-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-secondary/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                    <span>Get UPS Quote</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -607,135 +1146,217 @@
     <!-- ========== BATTERIES SECTION ========== -->
     <section id="batteries" class="py-20 lg:py-32 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <div class="inline-flex items-center space-x-2 bg-accent/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fa-solid fa-battery-full text-accent text-sm"></i>
+                    <span class="text-accent-dark font-semibold text-sm">Service #4</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Solar <span class="text-accent">Batteries</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Premium energy storage solutions for reliable power backup. Our batteries are designed for deep-cycle applications with long life and excellent performance.
+                </p>
+            </div>
+
+            <!-- Battery Types -->
+            <div class="grid lg:grid-cols-4 gap-6 mb-16">
                 
-                <!-- Left - Image & Stats -->
-                <div class="relative" data-animate="fade-in-left">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1620288627223-53302f4e8c74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                             alt="Battery Energy Storage Systems" 
-                             class="w-full h-[400px] lg:h-[500px] object-cover rounded-3xl shadow-2xl">
-                        
-                        <!-- Battery Types Card -->
-                        <div class="absolute -bottom-6 -right-6 lg:-right-10 bg-gradient-to-br from-accent to-accent-dark text-white rounded-2xl shadow-xl p-6 max-w-[280px]">
-                            <h4 class="font-bold mb-3">Battery Technologies</h4>
-                            <div class="space-y-2">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-battery-full text-white/80"></i>
-                                    <span class="text-sm">Lithium-Ion (Li-ion)</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-battery-three-quarters text-white/80"></i>
-                                    <span class="text-sm">Lead Acid (VRLA)</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-battery-half text-white/80"></i>
-                                    <span class="text-sm">Tubular Batteries</span>
-                                </div>
-                            </div>
+                <!-- Lithium-Ion -->
+                <div class="bg-gradient-to-br from-accent/10 to-blue-50 rounded-3xl p-6 border border-accent/20 hover:shadow-xl transition-all duration-300 service-card fade-in-up">
+                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-accent-dark rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <i class="fa-solid fa-atom text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lithium-Ion (Li-ion)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Advanced technology with highest energy density and longest lifespan.</p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Lifespan</span>
+                            <span class="font-bold text-accent">10-15 Years</span>
                         </div>
-
-                        <!-- Life Cycle Badge -->
-                        <div class="absolute top-6 left-6 bg-white rounded-xl p-4 shadow-lg">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-accent">5000+</div>
-                                <div class="text-xs text-gray-600">Charge Cycles</div>
-                            </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Cycles</span>
+                            <span class="font-bold text-gray-900">5000+</span>
                         </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">DoD</span>
+                            <span class="font-bold text-gray-900">90-100%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Efficiency</span>
+                            <span class="font-bold text-secondary">95-98%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-3 text-center">
+                        <span class="text-sm text-gray-600">Capacity: </span>
+                        <span class="font-bold text-accent">1kWh - 100kWh+</span>
                     </div>
                 </div>
 
-                <!-- Right - Content -->
-                <div data-animate="fade-in-right">
-                    <div class="inline-flex items-center space-x-2 bg-accent/10 rounded-full px-4 py-2 mb-6">
-                        <i class="fa-solid fa-battery-full text-accent text-sm"></i>
-                        <span class="text-accent-dark font-semibold text-sm">Service #4</span>
+                <!-- LiFePO4 -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 border border-green-200 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 100ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <i class="fa-solid fa-leaf text-white text-xl"></i>
                     </div>
-
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                        Energy Storage <span class="text-accent">Batteries</span>
-                    </h2>
-
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                        Premium battery solutions for reliable energy storage. Our batteries ensure your solar system or backup power setup operates at peak efficiency, providing power when you need it most.
-                    </p>
-
-                    <!-- Battery Comparison -->
-                    <div class="bg-gray-50 rounded-2xl p-6 mb-8">
-                        <h4 class="font-bold text-gray-900 mb-4">Why Choose Our Batteries?</h4>
-                        <div class="space-y-3">
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-700">Long Life Span</span>
-                                <div class="flex space-x-1">
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-700">Deep Discharge Capability</span>
-                                <div class="flex space-x-1">
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-700">Maintenance Free</span>
-                                <div class="flex space-x-1">
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-regular fa-star text-gray-300 text-sm"></i>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span class="text-gray-700">Temperature Tolerance</span>
-                                <div class="flex space-x-1">
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                    <i class="fa-solid fa-star text-solar-yellow text-sm"></i>
-                                </div>
-                            </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">LiFePO4 (LFP)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Safest lithium technology with excellent thermal stability.</p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Lifespan</span>
+                            <span class="font-bold text-green-600">15-20 Years</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Cycles</span>
+                            <span class="font-bold text-gray-900">6000+</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">DoD</span>
+                            <span class="font-bold text-gray-900">100%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Safety</span>
+                            <span class="font-bold text-secondary">Highest</span>
                         </div>
                     </div>
-
-                    <!-- Specifications -->
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-                        <div class="text-center">
-                            <i class="fa-solid fa-bolt text-accent text-2xl mb-2"></i>
-                            <div class="text-sm font-semibold text-gray-900">12V - 48V</div>
-                            <div class="text-xs text-gray-500">Voltage Range</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-weight text-accent text-2xl mb-2"></i>
-                            <div class="text-sm font-semibold text-gray-900">7Ah - 200Ah</div>
-                            <div class="text-xs text-gray-500">Capacity</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-temperature-high text-accent text-2xl mb-2"></i>
-                            <div class="text-sm font-semibold text-gray-900">-20°C to 60°C</div>
-                            <div class="text-xs text-gray-500">Operating Temp</div>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa-solid fa-recycle text-accent text-2xl mb-2"></i>
-                            <div class="text-sm font-semibold text-gray-900">100%</div>
-                            <div class="text-xs text-gray-500">Recyclable</div>
-                        </div>
+                    
+                    <div class="bg-white rounded-xl p-3 text-center">
+                        <span class="text-sm text-gray-600">Capacity: </span>
+                        <span class="font-bold text-green-600">2kWh - 500kWh</span>
                     </div>
-
-                    <a href="contact.html" class="inline-flex items-center space-x-2 bg-gradient-to-r from-accent to-accent-dark text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-accent/30 transform hover:-translate-y-0.5 transition-all duration-300">
-                        <i class="fa-solid fa-battery-full"></i>
-                        <span>Explore Batteries</span>
-                    </a>
                 </div>
+
+                <!-- Lead Acid -->
+                <div class="bg-gradient-to-br from-gray-100 to-slate-100 rounded-3xl p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 200ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-gray-600 to-gray-800 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <i class="fa-solid fa-car-battery text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Lead Acid (VRLA)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Proven technology with lowest upfront cost. Maintenance-free design.</p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Lifespan</span>
+                            <span class="font-bold text-gray-700">3-5 Years</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Cycles</span>
+                            <span class="font-bold text-gray-900">500-1000</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">DoD</span>
+                            <span class="font-bold text-gray-900">50%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Cost</span>
+                            <span class="font-bold text-secondary">Lowest</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-3 text-center">
+                        <span class="text-sm text-gray-600">Capacity: </span>
+                        <span class="font-bold text-gray-700">7Ah - 200Ah</span>
+                    </div>
+                </div>
+
+                <!-- Tubular -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-6 border border-orange-200 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 300ms;">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-amber-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <i class="fa-solid fa-bolt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Tubular Batteries</h3>
+                    <p class="text-gray-600 text-sm mb-4">Heavy-duty design for frequent power cuts. Ideal for inverters & UPS.</p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Lifespan</span>
+                            <span class="font-bold text-orange-600">5-7 Years</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Cycles</span>
+                            <span class="font-bold text-gray-900">1200-1500</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">DoD</span>
+                            <span class="font-bold text-gray-900">80%</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Backup</span>
+                            <span class="font-bold text-secondary">Excellent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-3 text-center">
+                        <span class="text-sm text-gray-600">Capacity: </span>
+                        <span class="font-bold text-orange-600">100Ah - 220Ah</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="bg-gray-50 rounded-3xl p-8 lg:p-12 overflow-x-auto fade-in-up">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Battery Comparison</h3>
+                <table class="w-full min-w-[600px]">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-4 px-4 font-bold text-gray-900">Feature</th>
+                            <th class="text-center py-4 px-4 font-bold text-accent">Lithium-Ion</th>
+                            <th class="text-center py-4 px-4 font-bold text-green-600">LiFePO4</th>
+                            <th class="text-center py-4 px-4 font-bold text-gray-700">Lead Acid</th>
+                            <th class="text-center py-4 px-4 font-bold text-orange-600">Tubular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 px-4 text-gray-700">Lifespan</td>
+                            <td class="text-center py-4 px-4"><span class="bg-accent/10 text-accent px-3 py-1 rounded-full text-sm">10-15 yrs</span></td>
+                            <td class="text-center py-4 px-4"><span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">15-20 yrs</span></td>
+                            <td class="text-center py-4 px-4"><span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">3-5 yrs</span></td>
+                            <td class="text-center py-4 px-4"><span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">5-7 yrs</span></td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 px-4 text-gray-700">Initial Cost</td>
+                            <td class="text-center py-4 px-4">High</td>
+                            <td class="text-center py-4 px-4">Higher</td>
+                            <td class="text-center py-4 px-4">Low</td>
+                            <td class="text-center py-4 px-4">Medium</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 px-4 text-gray-700">Weight</td>
+                            <td class="text-center py-4 px-4">Light</td>
+                            <td class="text-center py-4 px-4">Light</td>
+                            <td class="text-center py-4 px-4">Heavy</td>
+                            <td class="text-center py-4 px-4">Heavy</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="py-4 px-4 text-gray-700">Maintenance</td>
+                            <td class="text-center py-4 px-4">None</td>
+                            <td class="text-center py-4 px-4">None</td>
+                            <td class="text-center py-4 px-4">Low</td>
+                            <td class="text-center py-4 px-4">Medium</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 text-gray-700">Best For</td>
+                            <td class="text-center py-4 px-4">Solar Storage</td>
+                            <td class="text-center py-4 px-4">All Applications</td>
+                            <td class="text-center py-4 px-4">Budget Projects</td>
+                            <td class="text-center py-4 px-4">Home Inverters</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12 fade-in-up">
+                <a href="contact.html" class="inline-flex items-center space-x-3 bg-gradient-to-r from-accent to-accent-dark text-white px-8 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-accent/30 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <span>Explore Batteries</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -750,7 +1371,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                 <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
                     <i class="fa-solid fa-gears text-solar-yellow text-sm"></i>
                     <span class="text-white font-semibold text-sm">How We Work</span>
@@ -759,7 +1380,7 @@
                     Our Service <span class="text-secondary">Process</span>
                 </h2>
                 <p class="text-lg text-gray-200">
-                    From consultation to installation and beyond, we ensure a seamless experience at every step.
+                    From initial consultation to installation and lifetime support - we ensure a seamless experience at every step.
                 </p>
             </div>
 
@@ -767,19 +1388,19 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
                 
                 <!-- Step 1 -->
-                <div class="text-center" data-animate="fade-in-up" data-delay="100">
+                <div class="text-center fade-in-up">
                     <div class="relative inline-block mb-6">
                         <div class="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                             <i class="fa-solid fa-phone text-white text-2xl"></i>
                         </div>
                         <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">1</div>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Consultation</h3>
-                    <p class="text-gray-300 text-sm">Free consultation to understand your energy needs</p>
+                    <h3 class="text-white font-bold text-lg mb-2">Free Consultation</h3>
+                    <p class="text-gray-300 text-sm">Discuss your energy needs and get expert advice</p>
                 </div>
 
                 <!-- Step 2 -->
-                <div class="text-center" data-animate="fade-in-up" data-delay="200">
+                <div class="text-center fade-in-up" style="animation-delay: 100ms;">
                     <div class="relative inline-block mb-6">
                         <div class="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                             <i class="fa-solid fa-clipboard-check text-white text-2xl"></i>
@@ -787,11 +1408,11 @@
                         <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">2</div>
                     </div>
                     <h3 class="text-white font-bold text-lg mb-2">Site Survey</h3>
-                    <p class="text-gray-300 text-sm">Detailed assessment of your location</p>
+                    <p class="text-gray-300 text-sm">Detailed assessment of your location and requirements</p>
                 </div>
 
                 <!-- Step 3 -->
-                <div class="text-center" data-animate="fade-in-up" data-delay="300">
+                <div class="text-center fade-in-up" style="animation-delay: 200ms;">
                     <div class="relative inline-block mb-6">
                         <div class="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                             <i class="fa-solid fa-pencil-ruler text-white text-2xl"></i>
@@ -799,11 +1420,11 @@
                         <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">3</div>
                     </div>
                     <h3 class="text-white font-bold text-lg mb-2">Custom Design</h3>
-                    <p class="text-gray-300 text-sm">Tailored solution for optimal performance</p>
+                    <p class="text-gray-300 text-sm">Tailored solution for optimal performance & savings</p>
                 </div>
 
                 <!-- Step 4 -->
-                <div class="text-center" data-animate="fade-in-up" data-delay="400">
+                <div class="text-center fade-in-up" style="animation-delay: 300ms;">
                     <div class="relative inline-block mb-6">
                         <div class="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                             <i class="fa-solid fa-hammer text-white text-2xl"></i>
@@ -815,20 +1436,20 @@
                 </div>
 
                 <!-- Step 5 -->
-                <div class="text-center" data-animate="fade-in-up" data-delay="500">
+                <div class="text-center fade-in-up" style="animation-delay: 400ms;">
                     <div class="relative inline-block mb-6">
                         <div class="w-20 h-20 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl flex items-center justify-center group hover:bg-white/20 transition-all duration-300">
                             <i class="fa-solid fa-headset text-white text-2xl"></i>
                         </div>
                         <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">5</div>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Support</h3>
-                    <p class="text-gray-300 text-sm">Ongoing maintenance and 24/7 support</p>
+                    <h3 class="text-white font-bold text-lg mb-2">Lifetime Support</h3>
+                    <p class="text-gray-300 text-sm">Ongoing maintenance and 24/7 customer support</p>
                 </div>
             </div>
 
             <!-- CTA -->
-            <div class="text-center mt-12" data-animate="fade-in-up">
+            <div class="text-center mt-16 fade-in-up">
                 <a href="contact.html" class="inline-flex items-center space-x-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary hover:text-white hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                     <span>Start Your Project Today</span>
                     <i class="fa-solid fa-arrow-right"></i>
@@ -837,20 +1458,20 @@
         </div>
     </section>
 
-    <!-- ========== WHY CHOOSE OUR SERVICES ========== -->
+    <!-- ========== WHY CHOOSE US SECTION ========== -->
     <section class="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-in-up">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                 <div class="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
                     <i class="fa-solid fa-award text-primary text-sm"></i>
-                    <span class="text-primary font-semibold text-sm">Service Excellence</span>
+                    <span class="text-primary font-semibold text-sm">Why Choose Us</span>
                 </div>
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    Why Choose <span class="text-primary">Our Services?</span>
+                    Service <span class="text-primary">Excellence</span> Guaranteed
                 </h2>
                 <p class="text-lg text-gray-600">
-                    We deliver more than just products - we provide complete energy solutions with unmatched service quality.
+                    We deliver complete energy solutions with unmatched quality, service, and support.
                 </p>
             </div>
 
@@ -858,66 +1479,124 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Feature 1 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="100">
-                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up">
+                    <div class="w-16 h-16 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <i class="fa-solid fa-certificate text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Certified Products</h3>
-                    <p class="text-gray-600 leading-relaxed">All our products are certified and meet international quality standards including IEC, BIS, and CE certifications.</p>
+                    <p class="text-gray-600">All products meet international standards - IEC, BIS, MNRE approved with authentic warranties.</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="200">
-                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 100ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-primary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <i class="fa-solid fa-users-gear text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Team</h3>
-                    <p class="text-gray-600 leading-relaxed">Our team of certified engineers and technicians brings years of experience to every project we undertake.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Installation</h3>
+                    <p class="text-gray-600">Trained and certified technicians ensure safe, professional installations every time.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="300">
-                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <i class="fa-solid fa-hand-holding-dollar text-white text-2xl"></i>
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 200ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-secondary-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-indian-rupee-sign text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Best Pricing</h3>
-                    <p class="text-gray-600 leading-relaxed">Competitive pricing with flexible payment options and assistance with government subsidies and financing.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Best Prices</h3>
+                    <p class="text-gray-600">Competitive pricing with subsidy assistance. Get maximum value for your investment.</p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="400">
-                    <div class="w-16 h-16 bg-gradient-to-br from-solar-yellow to-solar-orange rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                               <!-- Feature 4 -->
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 300ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <i class="fa-solid fa-clock text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quick Turnaround</h3>
-                    <p class="text-gray-600 leading-relaxed">Fast project execution with typical residential installations completed within 2-3 days.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Quick Installation</h3>
+                    <p class="text-gray-600">Fast project execution - residential systems installed within 2-3 days, commercial within a week.</p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="500">
-                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 400ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
                         <i class="fa-solid fa-shield-halved text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Comprehensive Warranty</h3>
-                    <p class="text-gray-600 leading-relaxed">Industry-leading warranties with 25 years on solar panels and up to 10 years on other equipment.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">25 Year Warranty</h3>
+                    <p class="text-gray-600">Industry-leading warranties - 25 years on panels, 10 years on inverters, 5+ years on batteries.</p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300" data-animate="fade-in-up" data-delay="600">
-                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-solar-yellow rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                        <i class="fa-solid fa-wrench text-white text-2xl"></i>
+                <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 service-card fade-in-up" style="animation-delay: 500ms;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                        <i class="fa-solid fa-headset text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">After-Sales Service</h3>
-                    <p class="text-gray-600 leading-relaxed">Dedicated support team for maintenance, troubleshooting, and system upgrades throughout the product lifecycle.</p>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock customer support with dedicated AMC services and quick response times.</p>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="mt-20 bg-gradient-to-r from-primary to-primary-dark rounded-3xl p-8 lg:p-12 fade-in-up">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl lg:text-5xl font-bold text-white mb-2">500+</div>
+                        <div class="text-gray-300">Projects Completed</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl lg:text-5xl font-bold text-secondary mb-2">50MW+</div>
+                        <div class="text-gray-300">Capacity Installed</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl lg:text-5xl font-bold text-solar-yellow mb-2">1000+</div>
+                        <div class="text-gray-300">Happy Customers</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl lg:text-5xl font-bold text-accent-light mb-2">15+</div>
+                        <div class="text-gray-300">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BRANDS WE WORK WITH ========== -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Brands We Partner With</h3>
+                <p class="text-gray-600">Premium products from world-renowned manufacturers</p>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-6 items-center fade-in-up">
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Tata Power</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Luminous</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Growatt</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Waaree</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Microtek</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Exide</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Livguard</span>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-4 flex items-center justify-center h-20 hover:bg-primary/5 transition-colors duration-300">
+                    <span class="font-bold text-gray-600">Vikram</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ========== CTA SECTION ========== -->
-    <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section class="py-20 lg:py-32 bg-gray-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="relative bg-gradient-to-br from-primary via-primary-dark to-accent rounded-[3rem] overflow-hidden" data-animate="fade-in-up">
+            <div class="relative bg-gradient-to-br from-primary via-primary-dark to-accent rounded-[3rem] overflow-hidden fade-in-up">
                 <!-- Background Pattern -->
                 <div class="absolute inset-0 opacity-10">
                     <svg class="absolute top-0 right-0 w-1/2 h-full" viewBox="0 0 400 400" fill="none">
@@ -929,8 +1608,9 @@
 
                 <!-- Sun Animation -->
                 <div class="absolute -top-20 -right-20 w-64 h-64 bg-solar-yellow/20 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-secondary/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
 
-                <div class="relative px-8 py-16 lg:px-16 lg:py-20 text-center">
+                <div class="relative px-8 py-16 lg:px-16 lg:py-24 text-center">
                     <div class="max-w-3xl mx-auto">
                         <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
                             <i class="fa-solid fa-bolt text-solar-yellow"></i>
@@ -938,13 +1618,29 @@
                         </div>
 
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                            Ready to Power Your Future with 
-                            <span class="text-secondary">Clean Energy?</span>
+                            Ready to Switch to 
+                            <span class="text-secondary">Solar Energy?</span>
                         </h2>
 
                         <p class="text-lg text-gray-200 mb-8 leading-relaxed">
-                            Join thousands of satisfied customers who have made the switch to sustainable energy. Contact us now for a free consultation and customized quote.
+                            Join thousands of satisfied customers who are saving money and the environment with our solar solutions. Get a free consultation and customized quote today!
                         </p>
+
+                        <!-- Benefits List -->
+                        <div class="flex flex-wrap justify-center gap-4 mb-10">
+                            <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                                <i class="fa-solid fa-check-circle text-secondary"></i>
+                                <span class="text-white text-sm">Free Site Survey</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                                <i class="fa-solid fa-check-circle text-secondary"></i>
+                                <span class="text-white text-sm">Subsidy Assistance</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                                <i class="fa-solid fa-check-circle text-secondary"></i>
+                                <span class="text-white text-sm">Easy EMI Options</span>
+                            </div>
+                        </div>
 
                         <div class="flex flex-wrap justify-center gap-4">
                             <a href="contact.html" class="inline-flex items-center space-x-3 bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-secondary hover:text-white hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -952,6 +1648,7 @@
                                 <span>Get Free Consultation</span>
                             </a>
                             <a href="tel:+919876543210" class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+                                <i class="fa-solid fa-phone"></i>
                                 <span>Call: +91 98765 43210</span>
                             </a>
                         </div>
@@ -961,159 +1658,176 @@
         </div>
     </section>
 
+ 
+
     <!-- ========== FOOTER ========== -->
-    <footer class="bg-gray-900 text-white pt-20 pb-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Footer Top -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-gray-800">
-                
-                <!-- Company Info -->
-                <div class="lg:col-span-1">
-                    <a href="index.html" class="flex items-center space-x-3 mb-6">
-                        <div class="relative w-12 h-12 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center shadow-lg">
-                            <i class="fa-solid fa-solar-panel text-white text-xl"></i>
-                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-solar-yellow rounded-full animate-pulse"></div>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-xl font-bold text-white">Arya</span>
-                            <span class="text-xs font-medium text-accent -mt-1">Enterprises</span>
-                        </div>
-                    </a>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Leading provider of solar and power solutions. We're committed to delivering clean, sustainable energy for a brighter future.
-                    </p>
-                    <!-- Social Links -->
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-lg flex items-center justify-center transition-colors duration-300">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
+ <footer class="bg-gray-900 text-white pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Footer Top -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-gray-800">
+            
+            <!-- Company Info -->
+            <div class="lg:col-span-1">
+                <a href="index.html" class="flex items-center space-x-3 mb-6">
+                    <div class="relative">
+                        <img src="assets/images/logo.jpg" width="80px" height="80px" alt="Arya Enterprises Logo" >
+                        
                     </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 relative">
-                        Quick Links
-                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
-                    </h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="index.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>About Us</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Services</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Our Services -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 relative">
-                        Our Services
-                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
-                    </h4>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#solar-pv" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Solar PV Systems</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#inverters" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Inverters</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#ups" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>UPS Systems</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#batteries" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
-                                <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
-                                <span>Batteries</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 relative">
-                        Contact Us
-                        <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
-                    </h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-4">
-                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-location-dot text-primary"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400">123 Solar Street, Green City,<br>New Delhi - 110001, India</p>
-                            </div>
-                        </li>
-                        <li class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-phone text-secondary"></i>
-                            </div>
-                            <div>
-                                <a href="tel:+919876543210" class="text-gray-400 hover:text-secondary transition-colors duration-300">+91 98765 43210</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center space-x-4">
-                            <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-envelope text-accent"></i>
-                            </div>
-                            <div>
-                                <a href="mailto:info@aryaenterprises.com" class="text-gray-400 hover:text-secondary transition-colors duration-300">info@aryaenterprises.com</a>
-                            </div>
-                        </li>
-                    </ul>
+                    
+                </a>
+                <p class="text-gray-400 mb-6 leading-relaxed">
+                    India's trusted solar energy company since 2014. MNRE approved installer providing complete rooftop solar solutions with government subsidy assistance.
+                </p>
+                <!-- Social Links -->
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-red-600 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/919423577810" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-green-500 rounded-lg flex items-center justify-center transition-colors duration-300" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
 
-            <!-- Footer Bottom -->
-            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <p class="text-gray-500 text-sm text-center sm:text-left">
-                    &copy; <span id="current-year">2024</span> Arya Enterprises. All Rights Reserved.
-                </p>
-                <div class="flex items-center space-x-6 text-sm text-gray-500">
-                    <a href="#" class="hover:text-secondary transition-colors duration-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-secondary transition-colors duration-300">Terms of Service</a>
-                </div>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 relative">
+                    Quick Links
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                </h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="index.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>About Us</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Solar Calculator</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Our Solutions -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 relative">
+                    Solar Solutions
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                </h4>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="services.html#solar-pv" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Rooftop Solar Systems</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html#inverters" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Solar Inverters</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html#ups" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Solar UPS Systems</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html#batteries" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>Lithium Batteries</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html" class="text-gray-400 hover:text-secondary transition-colors duration-300 flex items-center space-x-2">
+                            <i class="fa-solid fa-chevron-right text-xs text-secondary"></i>
+                            <span>EV Charging Stations</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 relative">
+                    Contact Us
+                    <span class="absolute bottom-0 left-0 w-12 h-0.5 bg-secondary -mb-2"></span>
+                </h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-location-dot text-primary"></i>
+                        </div>
+                        <div>
+                            <p class="text-gray-400 leading-relaxed">B-506 Gold Ember CHS Ltd, Near Dnyandeep English Medium School, Narhe, Pune - 411041</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <a href="tel:+919423577810" class="text-gray-400 hover:text-secondary transition-colors duration-300 block">+91 94235 77810</a>
+                            <a href="tel:+919359349978" class="text-gray-400 hover:text-secondary transition-colors duration-300 block">+91 93593 49978</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope text-accent"></i>
+                        </div>
+                        <div>
+                            <a href="mailto:aryarenewables@gmail.com" class="text-gray-400 hover:text-secondary transition-colors duration-300 block">aryarenewables@gmail.com</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+
+        <!-- Footer Bottom -->
+        <div class="pt-8 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+            <div class="text-center lg:text-left">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="current-year">2024</span> Arya Enterprises. All Rights Reserved.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-4 lg:gap-6 text-sm text-gray-500">
+                <a href="https://sprintofy.com" target="_blank" class="hover:text-secondary transition-colors duration-300">Designed by Sprintofy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
     <!-- ========== BACK TO TOP BUTTON ========== -->
     <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible translate-y-4 transition-all duration-300 hover:shadow-xl hover:scale-110 z-50" aria-label="Back to Top">
@@ -1121,11 +1835,215 @@
     </button>
 
     <!-- ========== WHATSAPP BUTTON ========== -->
-    <a href="https://wa.me/919876543210" target="_blank" class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 hover:shadow-xl hover:scale-110 transition-all duration-300 z-50" aria-label="WhatsApp">
+    <!-- <a href="https://wa.me/919876543210?text=Hi,%20I'm%20interested%20in%20your%20solar%20services.%20Please%20share%20more%20details." target="_blank" class="fixed bottom-8 left-8 w-14 h-14 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 hover:shadow-xl hover:scale-110 transition-all duration-300 z-50 group" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp text-2xl"></i>
-    </a>
+        <span class="absolute left-16 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg text-sm font-medium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
+            Chat with us!
+        </span>
+    </a> -->
 
-    <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== PRELOADER =====
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.classList.add('preloader-hidden');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 800);
+        });
+
+        // ===== MOBILE MENU TOGGLE =====
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = mobileMenuBtn.querySelector('.hamburger-icon');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            hamburgerIcon.classList.toggle('hamburger-active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hamburger-active');
+            }
+        });
+
+        // ===== NAVBAR SCROLL EFFECT =====
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-md');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // ===== BACK TO TOP BUTTON =====
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('back-to-top-visible');
+            } else {
+                backToTopBtn.classList.remove('back-to-top-visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ===== SCROLL ANIMATIONS =====
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hamburger-active');
+                }
+            });
+        });
+
+        // ===== FAQ ACCORDION =====
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question.querySelector('i');
+
+            question.addEventListener('click', function() {
+                const isOpen = !answer.classList.contains('hidden');
+
+                // Close all other FAQs
+                faqItems.forEach(otherItem => {
+                    const otherAnswer = otherItem.querySelector('.faq-answer');
+                    const otherIcon = otherItem.querySelector('.faq-question i');
+                    otherAnswer.classList.add('hidden');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                });
+
+                // Toggle current FAQ
+                if (!isOpen) {
+                    answer.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // ===== UPDATE CURRENT YEAR =====
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // ===== SERVICE CARD HOVER EFFECTS =====
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // ===== PARALLAX EFFECT FOR HEADER =====
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.page-header');
+            if (header) {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.3;
+                header.style.backgroundPositionY = rate + 'px';
+            }
+        });
+
+        // ===== COUNTER ANIMATION =====
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('[data-counter]');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-counter'));
+                        animateCounter(counter, target);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // ===== INITIALIZE ANIMATIONS ON PAGE LOAD =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add animated class to visible elements on load
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('animated');
+                    }
+                });
+            }, 100);
+        });
+    </script>
 </body>
 </html>
